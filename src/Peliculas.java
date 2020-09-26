@@ -7,6 +7,7 @@ public class Peliculas {
 	public static void main(String[] args) {
 
 		Set<String> listaPeliculas = new HashSet<String>();
+		//Set<String> listaPeliculasCopia = new HashSet<String>();
 
 		listaPeliculas.add("Gladiador");
 		listaPeliculas.add("El transportador");
@@ -26,8 +27,7 @@ public class Peliculas {
 
 		boolean estaVacio = listaPeliculas.isEmpty();
 		System.out.println("¿La lista de peliculas en la lista esta vacia?  " + ((estaVacio) ? "Si" : "No"));
-
-		//
+		
 
 		listaPeliculas.clear();
 		System.out.println("Lista de peliculas despues de haber eliminado " + listaPeliculas.size());
