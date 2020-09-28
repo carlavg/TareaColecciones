@@ -39,27 +39,27 @@ public class Colores {
 		fragmentoDeColores = colores.subList(1, 3);
 		System.out.println(fragmentoDeColores);
 		System.out.println("Ahora vamos a clonar la lista de colores");
-		List<String> colores1 = new ArrayList<String>();
+		List<String> coloresCopia = new ArrayList<String>();
 
 		for (String color : colores) {
-			colores1.add(color);
+			coloresCopia.add(color);
 		}
 
-		System.out.println("Ahora vamos a mostrar la lista clonada\n" + colores1);
+		System.out.println("Ahora vamos a mostrar la lista clonada\n" + coloresCopia);
 
 		System.out.println("Ahora vamos a comparar la lista con su clone");
 
-		if (colores.equals(colores1)) {
+		if (colores.equals(coloresCopia)) {
 			System.out.println("Las listas son iguales");
 		} else {
 			System.out.println("Las listas no son iguales");
 		}
-		System.out.println("Ahora vamos a vaciar la lista original");
+		System.out.println("Ahora vamos a vaciar la lista de colores original");
 		colores.clear();
 		System.out.println("¿La lista de colores en la lista esta vacia?  " + colores.isEmpty());
 		System.out.println("Ahora vamos a comparar la lista vaciada con su clone");
 
-		if (colores.equals(colores1)) {
+		if (colores.equals(coloresCopia)) {
 			System.out.println("Las listas son iguales");
 		} else {
 			System.out.println("Las listas no son iguales");

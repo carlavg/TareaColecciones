@@ -19,25 +19,21 @@ public class Peliculas {
 		System.out.println(listaPeliculas);
 
 		System.out.println("Muestra la lista de peliculas por separado");
-		for (String peliculas : listaPeliculas)
+		for (String peliculas : listaPeliculas) {
 			System.out.println(peliculas);
+		}
 
 		System.out.println("Cantidad de peliculas en la lista : " + listaPeliculas.size());
 
 		boolean estaVacio = listaPeliculas.isEmpty();
-		System.out.println("¿La lista de peliculas en la lista esta vacia?  " + ((estaVacio) ? "Si" : "No"));
+		System.out.println("¿La lista de peliculas esta vacia? " + ((estaVacio) ? "Si" : "No"));
 
 		Set<String> listaPeliculasCopia = new HashSet<String>();
 
-		listaPeliculasCopia.add("Gladiador");
-		listaPeliculasCopia.add("El transportador");
-		listaPeliculasCopia.add("El señor de los anillos");
-		listaPeliculasCopia.add("Annabelle");
-		listaPeliculasCopia.add("Titanic");
-
-		for (String pelicula : listaPeliculasCopia) {
-			listaPeliculas.add(pelicula);
+		for (String pelicula : listaPeliculas) {
+			listaPeliculasCopia.add(pelicula);
 		}
+
 
 		System.out.println("Ahora vamos a mostrar la lista de peliculas clonada\n" + listaPeliculasCopia);
 
@@ -50,11 +46,13 @@ public class Peliculas {
 
 		}
 
+		System.out.println("Ahora vamos a vaciar la lista de peliculas original");
 		listaPeliculas.clear();
-		System.out.println("Lista de peliculas despues de haber eliminado " + listaPeliculas.size());
+		System.out.println("Lista de peliculas despues de haberla vaciado: \n" + listaPeliculas);
+		System.out.println("Tamaño de la lista de peliculas despues de haberla vaciado: " + listaPeliculas.size());
 
-		listaPeliculas.isEmpty();
-		System.out.println("¿La lista de peliculas en la lista esta vacia?  " + ((estaVacio) ? "Si" : "No"));
+		estaVacio = listaPeliculas.isEmpty();
+		System.out.println("¿La lista de peliculas original esta vacia?  " + ((estaVacio) ? "Si" : "No"));
 
 	}
 }
